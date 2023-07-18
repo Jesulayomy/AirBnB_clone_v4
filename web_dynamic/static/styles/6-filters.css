@@ -1,0 +1,153 @@
+button {
+    font-size: 18px;
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    right: 30px;
+}
+
+button:hover {
+    opacity: 90%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.filters {
+    background-color: white;
+    position: relative;
+    height: 70px;
+    width: 95%;
+    left: 3%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.locations {
+    border-right: 1px solid #DDDDDD;
+}
+
+.locations, .amenities {
+    height: 100%;
+    width: 25%;
+    padding: 0% 5%;
+    position: relative;
+}
+
+.locations h3, .amenities h3 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.locations h4, .amenities h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.locations:hover .popover, .amenities:hover .popover {
+    display: block;
+}
+
+.popover {
+    display: none;
+    background-color: #FAFAFA;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding: 0;
+    left: 0;
+    position: absolute;
+    padding-bottom: 5%;
+}
+
+.popover h2 {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.popover ul {
+    padding: 0;
+}
+
+.popover li {
+    padding-left: 10%;
+}
+
+.amenities ul.popover {
+    padding: 10%;
+}
+
+@media screen and (max-width:800px) {
+    button {
+        font-size: 12px;
+        height: 36px;
+        width: 15%;
+        right: 20px;
+    }
+    .filters {
+        height: 60px;
+        width: 90%;
+    }
+
+    .locations h3, .amenities h3 {
+        font-size: 14px;
+    }
+
+    .locations h4, .amenities h4 {
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    button {
+        font-size: 10px;
+        height: 24px;
+        width: 20%;
+        right: 10px;
+    }
+
+    .filters {
+        height: 40px;
+        width: 100%;
+    }
+
+    .locations, .amenities {
+        width: 30%;
+    }
+
+    .locations h3, .amenities h3 {
+        font-weight: 600;
+        font-size: 9px;
+    }
+
+    .locations h4, .amenities h4 {
+        font-weight: 400;
+        font-size: 7px;
+    }
+
+    .popover {
+        margin-top: 10px;
+    }
+
+    .popover h2 {
+        font-size: 8px;
+    }
+
+    .popover li {
+        font-size: 6px;
+    }
+
+}
