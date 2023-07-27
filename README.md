@@ -157,5 +157,11 @@ No known bugs at this time.
 Olamide Banuso - [Github](https://github.com/lammyprime) / [Twitter](https://twitter.com/lammy_prime)  
 Jesulayomi Aina - [Github](https://github.com/jesulayomy) / [Twitter](https://twitter.com/jesulayomi11)  
 
+## Developpment
+- [AirBnB v3](https://github.com/Jesulayomy/AirBnB_clone_v3)
+- [AirBnB v2](https://github.com/Jesulayomy/AirBnB_clone_v2)
+- [AirBnB v1](https://github.com/Jesulayomy/AirBnB_clone)
+
+
 ## License
 Public Domain. No copy write protection. 
