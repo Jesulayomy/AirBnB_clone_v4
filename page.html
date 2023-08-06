@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css?90f0f769-fcef-40cc-b843-21468d0d9ab7">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css?90f0f769-fcef-40cc-b843-21468d0d9ab7">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css?90f0f769-fcef-40cc-b843-21468d0d9ab7">
+    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?90f0f769-fcef-40cc-b843-21468d0d9ab7">
+    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css?90f0f769-fcef-40cc-b843-21468d0d9ab7">
+    <link rel="icon" href="../static/images/icon.png?90f0f769-fcef-40cc-b843-21468d0d9ab7" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../static/scripts/101-hbnb.js?90f0f769-fcef-40cc-b843-21468d0d9ab7"></script>
+
+    <title>HBnB</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+      <div id="api_status"></div>
+    </header>
+    <div class="container">
+      <section class="filters">
+	<div class="locations">
+	  <h3>States</h3>
+	  <h4>&nbsp;</h4>
+	  <div class="popover">
+	    <ul>
+	      
+	      <li>
+		<h2>
+	      	  <input type="checkbox" data-type="state" data-id="0e391e25-dd3a-45f4-bce3-4d1dea83f3c7" data-name="Alabama"> Alabama:
+		</h2>
+		<ul>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="f01c88dc-9f08-4b32-a1c1-625fb1e44972" data-name="Akron"> Akron
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="94f16095-5ce6-4bec-8114-d1f3fa6f2b16" data-name="Babbie"> Babbie
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="660c9bbd-76c4-454f-b9a4-87efab0e948f" data-name="Calera"> Calera
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="f14fefb3-c6e4-42f6-8a5a-ee704a101f8b" data-name="Fairfield"> Fairfield
+		  </li>
+		  
+		</ul>
+	      </li>
+	      
+	      <li>
+		<h2>
+	      	  <input type="checkbox" data-type="state" data-id="459e021a-e794-447d-9dd2-e03b7963f7d2" data-name="Arizona"> Arizona:
+		</h2>
+		<ul>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="1721b75c-e0b2-46ae-8dd2-f86b62fb46e6" data-name="Douglas"> Douglas
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="1aef765c-3c91-47aa-a716-ffd3b8d748df" data-name="Kearny"> Kearny
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="14e2f358-f8fb-419c-8e8f-0017f971d82d" data-name="Tempe"> Tempe
+		  </li>
+		  
+		</ul>
+	      </li>
+	      
+	      <li>
+		<h2>
+	      	  <input type="checkbox" data-type="state" data-id="9799648d-88dc-4e63-b858-32e6531bec5c" data-name="California"> California:
+		</h2>
+		<ul>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="3308ceb8-8e99-4abb-9c2a-a6446eaf01f7" data-name="Fremont"> Fremont
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="d96b80e3-2c05-4fb6-922e-36643005a530" data-name="Napa"> Napa
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="05b0b99c-f10e-4e3a-88d1-b3187d6998ee" data-name="San Francisco"> San Francisco
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="33c525b5-f087-421c-946d-ba8c7a1c2efe" data-name="San Jose"> San Jose
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="6a1ea750-b16f-4814-ad7e-9f25e3843f53" data-name="Sonoma"> Sonoma
+		  </li>
+		  
+		</ul>
+	      </li>
+	      
+	      <li>
+		<h2>
+	      	  <input type="checkbox" data-type="state" data-id="f8d21261-3e79-4f5c-829a-99d7452cd73c" data-name="Colorado"> Colorado:
+		</h2>
+		<ul>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="5481bd82-04ab-4a58-ae01-d67443aec20c" data-name="Denver"> Denver
+		  </li>
+		  
+		</ul>
+	      </li>
+	      
+	      <li>
+		<h2>
+	      	  <input type="checkbox" data-type="state" data-id="5976f0e7-5c5f-4949-aae0-90d68fd239c0" data-name="Florida"> Florida:
+		</h2>
+		<ul>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="dacec983-cec4-4f68-bd7f-af9068a305f5" data-name="Miami"> Miami
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="712ffb97-b0eb-42f9-8cb9-69548882ab5d" data-name="Orlando"> Orlando
+		  </li>
+		  
+		</ul>
+	      </li>
+	      
+	      <li>
+		<h2>
+	      	  <input type="checkbox" data-type="state" data-id="541bba6e-9543-4b33-8062-77ef26cd9778" data-name="Hawaii"> Hawaii:
+		</h2>
+		<ul>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="79ff14a4-1888-4cd3-8a31-230fa34bfa00" data-name="Honolulu"> Honolulu
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="5e061866-d4ad-4aa7-befe-2bf5f8698e29" data-name="Kailua"> Kailua
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="44e7a911-2c16-4dc0-ad68-9ae0412afc21" data-name="Pearl city"> Pearl city
+		  </li>
+		  
+		</ul>
+	      </li>
+	      
+	      <li>
+		<h2>
+	      	  <input type="checkbox" data-type="state" data-id="d2398800-dd87-482b-be21-50a3063858ad" data-name="Illinois"> Illinois:
+		</h2>
+		<ul>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="4a0c57bb-60da-450c-afcf-c59be4c05e67" data-name="Chicago"> Chicago
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="14e49d0b-7363-40e3-8854-a89e96481f67" data-name="Joliet"> Joliet
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="c5bbe76a-87f0-44f8-8b4d-e805e6cd757c" data-name="Naperville"> Naperville
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="b695fcb4-7e61-420c-aa22-d1651cde13dc" data-name="Peoria"> Peoria
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="492cc20d-21b4-474b-a727-e1981cfc49d5" data-name="Urbana"> Urbana
+		  </li>
+		  
+		</ul>
+	      </li>
+	      
+	      <li>
+		<h2>
+	      	  <input type="checkbox" data-type="state" data-id="2b9a4627-8a9e-4f32-a752-9a84fa7f4efd" data-name="Louisiana"> Louisiana:
+		</h2>
+		<ul>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="e4e40a6e-59ff-4b4f-ab72-d6d100201588" data-name="Baton rouge"> Baton rouge
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="45903748-fa39-4cd0-8a0b-c62bfe471702" data-name="Lafayette"> Lafayette
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="1da255c0-f023-4779-8134-2b1b40f87683" data-name="New Orleans"> New Orleans
+		  </li>
+		  
+		</ul>
+	      </li>
+	      
+	      <li>
+		<h2>
+	      	  <input type="checkbox" data-type="state" data-id="b5fc9076-6c20-44a7-ac9b-97de17112329" data-name="Minnesota"> Minnesota:
+		</h2>
+		<ul>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="36bff3a3-e3b3-41b9-a6b5-ab2185a8cdf0" data-name="Saint Paul"> Saint Paul
+		  </li>
+		  
+		</ul>
+	      </li>
+	      
+	      <li>
+		<h2>
+	      	  <input type="checkbox" data-type="state" data-id="bbee73a7-2f71-47e6-938a-2d9e932d4ff9" data-name="Mississippi"> Mississippi:
+		</h2>
+		<ul>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="3ffd4ed8-b645-46bc-8bc3-40c0e51f2b44" data-name="Jackson"> Jackson
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="c49639ab-d287-40ec-8a31-76b493cd9a3a" data-name="Meridian"> Meridian
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="f3923bdf-81f2-45e9-a5e1-fd128e122d45" data-name="Tupelo"> Tupelo
+		  </li>
+		  
+		</ul>
+	      </li>
+	      
+	      <li>
+		<h2>
+	      	  <input type="checkbox" data-type="state" data-id="10098698-bace-4bfb-8c0a-6bae0f7f5b8f" data-name="Oregon"> Oregon:
+		</h2>
+		<ul>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="a5e4fa5a-2a0d-4c7c-b824-d318409e11e8" data-name="Eugene"> Eugene
+		  </li>
+		  
+		  <li>
+	      	    <input type="checkbox" data-type="city" data-id="b11616e0-fa23-4939-bd3f-0e178de3530b" data-name="Portland"> Portland
+		  </li>
+		  
+		</ul>
+	      </li>
+	      
+	    </ul>
+	  </div>
+	</div>
+	<div class="amenities">
+	  <h3>Amenities</h3>
+	  <h4>&nbsp;</h4>
+	  <div class="popover">
+	    <ul>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="886e4374-db3d-43dc-9615-ec1c98c15c12" data-name="24-hour check-in"> 24-hour check-in
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="919be9d0-5789-4b56-b785-0e4d72ecc8ba" data-name="Air conditioning"> Air conditioning
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="9c54e3ed-48b3-4438-bb2c-304e14a9bde4" data-name="Breakfast"> Breakfast
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="d3cb5b63-2f99-4c55-86a7-3127eb4a8128" data-name="Buzzer/wireless intercom"> Buzzer/wireless intercom
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="017ec502-e84a-4a0f-92d6-d97e27bb6bdf" data-name="Cable TV"> Cable TV
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="d7275f8c-70e5-4c27-bcd6-aafd5256fccd" data-name="Carbon monoxide detector"> Carbon monoxide detector
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="3e73edf2-c3d6-409f-9202-213df4a7a25a" data-name="Cat(s)"> Cat(s)
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="cf701d1a-3c19-4bac-bd99-15321f1140f2" data-name="Dog(s)"> Dog(s)
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="efafcf4e-59cf-45e2-b8c5-e14ae252ca01" data-name="Doorman"> Doorman
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="5429dc8c-799d-4555-98c6-f2d714a9fe50" data-name="Doorman Entry"> Doorman Entry
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="ea518e20-3370-4cb3-b38f-df1cccbdd8a9" data-name="Dryer"> Dryer
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="79f2ca91-dc2b-44cb-9e08-f43c1a9d6d54" data-name="Elevator in building"> Elevator in building
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="43d414fb-0fff-4ea9-8c44-3819ec041c9b" data-name="Essentials"> Essentials
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="47327246-6852-4c70-b3db-77077ab61a32" data-name="Family/kid friendly"> Family/kid friendly
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="7ae79c7e-955f-474a-bbdc-f05d4229fcd2" data-name="Fire extinguisher"> Fire extinguisher
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="f7c854a4-f565-4aa5-8542-c4e17c498ef1" data-name="First aid kit"> First aid kit
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="885a80bf-1a79-431c-a5c7-f05d87c9e159" data-name="Free parking on premises"> Free parking on premises
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="416cddd7-746e-4715-821c-3ad30b9bc3c3" data-name="Gym"> Gym
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="f4dfd576-7c29-4bdf-9fbd-5c95a170ebce" data-name="Hair dryer"> Hair dryer
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="d087d6cd-2ded-4bf7-8f32-61612a2da417" data-name="Hangers"> Hangers
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="43de9883-8b2d-44dc-81d3-8b719ea50734" data-name="Heating"> Heating
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="3fccec93-2842-49a0-8fdb-4008af2ef041" data-name="Hot tub"> Hot tub
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="dcfb45cc-b170-4ace-97af-9957b564606a" data-name="Indoor fireplace"> Indoor fireplace
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="12e9ccb4-03e4-4f82-ac3d-4fc7e3ebfbfe" data-name="Internet"> Internet
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="cb0c9658-79a7-41ac-b816-4201f3e98d80" data-name="Iron"> Iron
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="8d5b1bf3-4bd2-4283-86ce-91211fbc788d" data-name="Keypad"> Keypad
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="4e320c4e-deb6-4ccb-b45e-b77a5df3ff40" data-name="Kitchen"> Kitchen
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="98850f9d-0835-46df-90e3-5fef156724a0" data-name="Laptop friendly workspace"> Laptop friendly workspace
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="6b9c3987-a344-4baf-8d11-077d719688ba" data-name="Lock on bedroom door"> Lock on bedroom door
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="0d375b05-5ef9-4d43-aaca-436762bb25bf" data-name="Lockbox"> Lockbox
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="1e0f976d-beef-497b-b29c-b4a25d1c071a" data-name="Other pet(s)"> Other pet(s)
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="4a0a3fa7-21a0-411a-bb0a-9b4eed1901ef" data-name="Pets allowed"> Pets allowed
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="2a98b8af-1cd7-4236-a99e-7200c992fad7" data-name="Pets live on this property"> Pets live on this property
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="f4e98f0a-053a-42e2-9633-0cca2a587410" data-name="Pool"> Pool
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="e7680872-7b76-4565-aa8b-6c3d182caa1c" data-name="Private entrance"> Private entrance
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="28ff856a-2cfb-44df-91b8-1285914553c8" data-name="Private living room"> Private living room
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="c4b9d932-71f4-4f10-9e09-502c3eb67ee2" data-name="Safety card"> Safety card
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="2c620702-d41c-4732-a1cf-6e40f7877dc3" data-name="Self Check-In"> Self Check-In
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="baf27726-2b9c-4cb4-ad97-2baec4527be6" data-name="Shampoo"> Shampoo
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="20f281b1-2cd1-4e36-a7c7-d1062ff16bcd" data-name="Smartlock"> Smartlock
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="a6fc4fa4-345b-4c64-aee9-791afaf10f11" data-name="Smoke detector"> Smoke detector
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="f7a087bb-13e2-463d-a951-b8feb7da899f" data-name="Smoking allowed"> Smoking allowed
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="92709c8a-65d4-4fb9-811a-f25ef328822e" data-name="Suitable for events"> Suitable for events
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="2f055228-5fd3-4b1d-a021-7e4b9b7d70a6" data-name="TV"> TV
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="6dd36c9f-9863-4850-a810-a7629fe07d72" data-name="Washer"> Washer
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="6f8987f8-7354-4770-8774-4f5e25acb173" data-name="Wheelchair accessible"> Wheelchair accessible
+	      </li>
+	      
+	      <li>
+		      <input type="checkbox" data-type="amenity" data-id="49fcaedc-481a-4e05-934f-4867988c8ec5" data-name="Wireless Internet"> Wireless Internet
+	      </li>
+	      
+	    </ul>
+	  </div>
+	</div>
+	<button type="button">Search</button>
+      </section>
+      <div class="placesh1"><h1>Places</h1></div>
+      <section class="places">
+      </section>
+    </div>
+    <footer>
+      <p>Holberton School</p>
+    </footer>
+  </body>
+</html>
